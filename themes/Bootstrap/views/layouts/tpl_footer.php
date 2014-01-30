@@ -37,14 +37,6 @@
 						<div class="w-contacts">
 							<div class="w-contacts-h">
 								<div class="w-contacts-list">
-                  <!-- <div class="w-contacts-item">
-                    <i class="fa fa-map-marker"></i>
-                    <span class="w-contacts-item-value">1600 Amphitheatre Parkway, Mountain View, CA 94043, United States</span>
-                  </div> -->
-                  <!-- <div class="w-contacts-item">
-                    <i class="fa fa-phone"></i>
-                    <span class="w-contacts-item-value">+321 123 4567</span>
-                  </div> -->
 									<div class="w-contacts-item">
 										<i class="fa fa-envelope-o"></i>
 										<span class="w-contacts-item-value"><a href="mailto:tinyfool+textbookmakers@gmail.com">tinyfool@gmail.com</a></span>
@@ -117,7 +109,10 @@
 		<div class="l-subfooter at_bottom">
 			<div class="l-subfooter-h i-cf">
 
-				<div class="w-copyright">© 2013 All rights reserved. </div>
+				<div class="w-copyright">© 2013 All rights reserved. 
+
+					<a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备14004046号</a>
+				</div>
 
 				<!-- NAV -->
 				<nav class="w-nav">
