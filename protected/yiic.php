@@ -1,4 +1,5 @@
 <?php
+define('YII_DEBUG',true);
 
 // change the following paths if necessary
 $yiic=dirname(__FILE__).'/../../framework/yii/framework/yiic.php';
