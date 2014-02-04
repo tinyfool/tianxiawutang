@@ -1,20 +1,44 @@
 <?php
-/* @var $this SiteController */
-
-$this->pageTitle=Yii::app()->name;
+	$this->pageTitle=Yii::app()->name;
 ?>
+<h1><?php echo CHtml::encode(Yii::app()->name); ?> - 糖尿病病友互助社区</h1>
 
-<h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
-
-<p>Congratulations! You have successfully created your Yii application.</p>
-
-<p>You may change the content of this page by modifying the following two files:</p>
-<ul>
-	<li>View file: <code><?php echo __FILE__; ?></code></li>
-	<li>Layout file: <code><?php echo $this->getLayoutFile('main'); ?></code></li>
-</ul>
-
-<p>For more details on how to further develop this application, please read
-the <a href="http://www.yiiframework.com/doc/">documentation</a>.
-Feel free to ask in the <a href="http://www.yiiframework.com/forum/">forum</a>,
-should you have any questions.</p>
+<p>
+	我叫郝培强，是一个二型糖尿病患者。
+</p>
+<p>
+	我有个朋友在30多岁的时候，因为酮中毒昏倒在健身房，之后，他给我们这些朋友们说，大家都应该注意下自己的健康。那时我29岁，刚好在创业的第二年，所以也就是刚好在没有做例行年度体检的第二年。之前我的血糖一直是正常的，但是身边有人得了糖尿病，还是让我很认真的去做了一个体检。结果是，我也得了。
+</p>
+<p>
+	我拿着体检单子，找了家医院挂了号，给医生看体检结果。医生说，你得了糖尿病，然后给我开了格列美脲和盐酸二甲双胍，告诉我怎么吃药。我问她有什么注意事项么，她说，多锻炼注意饮食。然后，就打发我走了。
+</p>
+<p>
+	当时我29岁，事业还没有什么大的起色，就已经得了这种老年病，这种慢性病。走出医院的时候，我很迷惘，不知道怎么做才好。
+</p>
+<p>
+	半年前，是我第二次创业的一个艰难阶段，事业同样没有太大起色，但是面临了很大的心理压力，种种抉择在我面前，我生活的更没有规律。直到有一天，我发现，身体开始有明显的反应，比如这两天完全不运动，饮食也不规律的话，皮肤就会瘙痒，红疹，也很容易长疖子，或者容易感冒。我突然有点担心自己这样下去活不了太久。
+</p>
+<p>
+	于是，我开始每天走路，从一天走5-10公里开始，后来每天可以走到15公里以上。
+	慢慢的我开始感觉身体正常起来了。体重也下降了很多。我最近一个月开始每日监控血糖，餐前餐后都很正常，身体的反应也比较正常。
+</p>
+<p>
+	其实，控制一次两次的血糖并不困难。但是作为一个病人可能一开始会感到很无助。而且，这是一个终身的疾病，需要一辈子坚持饮食控制和身体锻炼。除去遗传因素，身体差异的话，我估计大多数人会得糖尿病，多少都跟没有良好的习惯有关系。那怎么才能养好良好的习惯呢？
+</p>
+<p>
+	最近我在和一个医疗行业的朋友聊天。我们聊天的时候，我才知道中国，已经有1.14亿糖尿病患者。
+	而，易感人群、亲属等受到糖尿病威胁或者说影响的人群则难以计算。但是，医院主要是用来救治患者的。
+	糖尿病人的日常监控，培训，辅导，咨询等等，根本没有人管。
+	当我们病倒了，医院可以管我们，但是如果我们没有病倒，只是血糖控制不佳，我们很难从医生那里获得指导和帮助。
+	因为这个国家的医疗资源本来就严重不足，很多时候把那些迫在眉睫的问题解决好，都很困难。何况是，我们这些暂时没有生命危险的人呢？
+</p>
+<p>
+	自助者天助之，所以，我想创建这么一个糖尿病友的互助社区，也许可以交流一些信息和心得，组织一些活动，或者集资邀请一些医生健康专家给我们做线下讲座等等。</p>
+<p>
+	如果你是病友，或者病友家属，想参与这么一个社区的话，请点击下面的“通知我”按钮，留下你的信息。我们将在社区启动的时候，通知你参与，也欢迎同时留下你的意见和建议。
+</p>
+<div style="text-align:center;margin-bottom:10px;">
+	<p>
+		<a href="/notifyme/create/"  type="button" class="btn btn-primary btn-lg">通 知 我</a>
+	</p>
+</div>
