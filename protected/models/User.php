@@ -52,10 +52,10 @@ class User extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'username' => 'Username',
-			'password' => 'Password',
-			'email' => 'Email',
+			'id' => '编号',
+			'username' => '用户名',
+			'password' => '密码',
+			'email' => '邮箱',
 		);
 	}
 

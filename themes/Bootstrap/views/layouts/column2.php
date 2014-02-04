@@ -1,31 +1,19 @@
-<?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
-<section class="main-body">
-  <div class="container">
-  <div class="row-fluid">
-	
-    <div class="span8">
-
-		<?php if(isset($this->breadcrumbs)):?>
-            <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-                'links'=>$this->breadcrumbs,
-                'homeLink'=>CHtml::link('Dashboard'),
-                'htmlOptions'=>array('class'=>'breadcrumb')
-            )); ?><!-- breadcrumbs -->
-        <?php endif?>
-        
-        <!-- Include content pages -->
-        <?php echo $content; ?>
-
-	</div><!--/span-->
-    
-    <div class="span2">
-		<?php include_once('tpl_sidebar.php');?>
-		
-    </div><!--/span-->
-  </div><!--/row-->
+<div class="container-fluid">
+  <?php if(isset($this->breadcrumbs)):?>
+    <?php $this->widget('zii.widgets.CBreadcrumbs', array(
+        'links'=>$this->breadcrumbs,
+        'homeLink'=>CHtml::link('Dashboard'),
+        'htmlOptions'=>array('class'=>'breadcrumb')
+    )); ?>
+  <?php endif?>
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <?php echo $content; ?>
+	  </div>
+    <div class="col-xs-12 col-md-4">
+     <?php include_once('tpl_sidebar.php');?>
+    </div>
+  </div>
 </div>
-</section>
-
-
 <?php $this->endContent(); ?>
