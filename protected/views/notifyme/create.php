@@ -12,7 +12,15 @@ $this->menu=array(
 	array('label'=>'Manage Notifyme', 'url'=>array('admin')),
 );
 ?>
-
-<h1>Create Notifyme</h1>
-
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-md-3">
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<h1>通知我</h1>
+			<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+		</div>
+		<div class="col-xs-12 col-md-3">
+		</div>
+	</div>
+</div>

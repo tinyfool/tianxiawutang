@@ -28,9 +28,23 @@ class Notifyme extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('status, featurerequired, age', 'required'),
-			array('status, age', 'numerical', 'integerOnly'=>true),
-			array('email', 'length', 'max'=>255),
+			array(
+				'status, featurerequired, age, email', 
+				'required',
+				'message'=>'{attribute}必须填写'),
+			array(
+				'age', 
+				'numerical', 
+				'integerOnly'=>true,
+				'message' => '{attribute}必须为数字'),
+			array(
+				'email', 
+				'length', 
+				'max'=>255),
+			array(
+				'email',
+				'email',
+				'message' => '{attribute}必须为正确的电子邮箱格式'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, email, status, featurerequired, age', 'safe', 'on'=>'search'),
@@ -55,10 +69,10 @@ class Notifyme extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'email' => 'Email',
-			'status' => 'Status',
-			'featurerequired' => 'Featurerequired',
-			'age' => 'Age',
+			'email' => '邮箱',
+			'status' => '与糖尿病',
+			'featurerequired' => '功能需求',
+			'age' => '年龄',
 		);
 	}
 

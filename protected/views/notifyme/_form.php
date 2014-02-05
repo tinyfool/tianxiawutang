@@ -3,6 +3,32 @@
 /* @var $model Notifyme */
 /* @var $form CActiveForm */
 ?>
+<style>
+	.labelforkey {
+		width:80px;
+		text-align:right;
+		display:inline-block;
+		font-weight:bold;
+		color:green;
+	}
+	.form_row {
+
+		margin-top: 7px;
+		margin-bottom: 7px;
+	}
+	.errorMessage {
+
+		color: red;
+		font-style: italic;
+		text-align: center;
+	}
+	.errorSummary {
+		color: blue;
+	}
+	.page_input {
+		width: 300px;
+	}
+</style>
 
 <div class="form">
 
@@ -15,36 +41,67 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
+<!-- 	<p class="note">Fields with <span class="required">*</span> are required.</p>
+ -->
+	<p>*全部为必填项。</p>
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'email'); ?>
-		<?php echo $form->textField($model,'email',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'email'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'status'); ?>
-		<?php echo $form->textField($model,'status'); ?>
-		<?php echo $form->error($model,'status'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'featurerequired'); ?>
-		<?php echo $form->textArea($model,'featurerequired',array('rows'=>6, 'cols'=>50)); ?>
-		<?php echo $form->error($model,'featurerequired'); ?>
-	</div>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'age'); ?>
-		<?php echo $form->textField($model,'age'); ?>
+	<div class="form_row">
+		<span class="labelforkey"><?php echo $form->label($model,'age'); ?></span>
+		<?php echo $form->textField($model,'age',array('class' => 'page_input')); ?>
 		<?php echo $form->error($model,'age'); ?>
 	</div>
 
-	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
+	<div class="form_row">
+		<span class="labelforkey"><?php echo $form->label($model,'email'); ?></span>
+		<?php echo $form->textField(
+							$model,
+							'email',
+							array(
+								'size'=>60,
+								'maxlength'=>255,
+								'class' => 'page_input')
+							); ?>
+		<?php echo $form->error($model,'email'); ?>
+	</div>
+
+	<div class="form_row">
+		<span class="labelforkey"><?php echo $form->label($model,'status'); ?></span>
+		<?php echo CHtml::dropDownList(
+					'Notifyme[status]',
+					'',
+					array(
+						'0' => '毫无关系',
+						'1' => '我是一型糖尿病人', 
+						'2' => '我是二型糖尿病人',
+						'3' => '我是糖尿病人家属',
+						'4' => '我担心自己有糖尿病',
+						));
+		?>
+		<?php echo $form->error($model,'status'); ?>
+	</div>
+
+	<div class="form_row">
+		<span class="labelforkey"><?php echo $form->label($model,'featurerequired'); ?></span>
+		<?php echo $form->textArea(
+							$model,
+							'featurerequired',
+							array(
+								'rows'=>6,
+								'cols'=>50,
+								'class' => 'page_input')); ?>
+		<p>
+			你觉得应该有什么功能，欢迎留言，也欢迎提出各种意见和建议。
+		</p>
+		<?php echo $form->error($model,'featurerequired'); ?>
+	</div>
+
+    <div class="form_row text-center">
+    	<?php echo 
+    		CHtml::submitButton(
+				$model->isNewRecord ? '请通知' : '保存',
+				array('class' => 'btn btn-primary')
+			); 
+		?>
 	</div>
 
 <?php $this->endWidget(); ?>
