@@ -32,7 +32,7 @@ class NotifymeController extends Controller
 				'users'=>array('admin'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create'),
+				'actions'=>array('create','success'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -71,7 +71,7 @@ class NotifymeController extends Controller
 		{
 			$model->attributes=$_POST['Notifyme'];
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('success'));
 		}
 
 		$this->render('create',array(
@@ -141,6 +141,11 @@ class NotifymeController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+
+	public function actionSuccess() 
+	{
+		$this->render('success');
 	}
 
 	/**

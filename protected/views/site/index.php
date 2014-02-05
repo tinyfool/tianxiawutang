@@ -1,6 +1,7 @@
 <?php
 	$this->pageTitle=Yii::app()->name;
 ?>
+<div style="padding:10px;">
 <h1><?php echo CHtml::encode(Yii::app()->name); ?> - 糖尿病病友互助社区</h1>
 
 <p>
@@ -41,4 +42,5 @@
 	<p>
 		<a href="/notifyme/create/"  type="button" class="btn btn-primary btn-lg">通 知 我</a>
 	</p>
+</div>
 </div>
